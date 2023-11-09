@@ -1,56 +1,50 @@
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Goofy Site</title>
     <style>
         body {
             background-color: black;
             margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
         }
 
-        .navbar {
-            background-color: #333;
+        #navbar {
             position: fixed;
             top: 0;
-            left: 0;
-            right: 0;
+            width: 100%;
+            background-color: #333;
             display: flex;
             justify-content: flex-end;
-            padding: 10px;
         }
 
-        .nav-button {
-            color: white;
+        #navbar a {
             text-decoration: none;
-            padding: 10px;
-            margin: 0 5px;
-            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            margin-right: 10px;
             transition: background-color 0.3s;
         }
 
-        .nav-button:hover {
+        #navbar a:hover {
             background-color: #555;
         }
 
-        .content {
-            margin: 50px 0 0 0;
+        #content {
+            padding: 100px 20px;
             text-align: center;
         }
     </style>
-    <title>Your Goofy Site</title>
 </head>
 <body>
-    <div class="navbar">
-        <a href="index.html" class="nav-button">Home</a>
-        <a href="games.html" class="nav-button">Games</a>
-        <a href="apps.html" class="nav-button">Apps</a>
-        <a href="proxy.html" class="nav-button">Proxy</a>
-        <a href="settings.html" class="nav-button">Settings</a>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="apps.html">Apps</a>
+        <a href="proxy.html">Proxy</a>
+        <a href="memes.html">Memes</a>
+        <a href="settings.html">Settings</a>
     </div>
 
-    <div class="content">
+    <div id="content">
         <h1>Welcome to my little Goofy Site</h1>
     </div>
 </body>
