@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
+            background-color: black;
             margin: 0;
             padding: 0;
-            background-color: black;
-            font-family: Arial, sans-serif;
         }
 
-        .navbar {
+        #navbar {
             position: fixed;
             top: 0;
-            left: 0;
             width: 100%;
             background-color: #333;
             color: white;
@@ -22,38 +17,54 @@
             justify-content: flex-end;
         }
 
-        .navbar a {
+        #navbar a {
             text-decoration: none;
             color: white;
             padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        #navbar a:hover {
+            background-color: #555;
+        }
+
+        #content {
+            text-align: center;
+            padding: 100px;
+            font-size: 24px;
+            color: white;
+        }
+
+        #github {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-image: url("https://github.com/GoofyGamesProduction/goofygamesproduction.github.io/raw/main/github-icon.png");
+            background-size: cover;
+            cursor: pointer;
             transition: transform 0.3s;
         }
 
-        .navbar a:hover {
+        #github:hover {
             transform: scale(1.1);
-        }
-
-        .center-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            font-size: 24px;
-            color: white;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#">Home</a>
-        <a href="#">Games</a>
-        <a href="#">Apps</a>
-        <a href="#">Proxy</a>
-        <a href="#">Settings</a>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="apps.html">Apps</a>
+        <a href="proxy.html">Proxy</a>
+        <a href="settings.html">Settings</a>
     </div>
-    <div class="center-text">
+
+    <div id="content">
         <p>Welcome to my little Goofy Site.</p>
     </div>
+
+    <a id="github" href="https://github.com/GoofyGamesProduction/goofygamesproduction.github.io" target="_blank"></a>
 </body>
 </html>
