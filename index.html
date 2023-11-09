@@ -1,40 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
             padding: 0;
             background-color: black;
+            font-family: Arial, sans-serif;
         }
 
         .navbar {
-            background-color: #333;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
+            background-color: #333;
+            color: white;
             display: flex;
             justify-content: flex-end;
-            padding: 10px;
         }
 
         .navbar a {
-            color: white;
             text-decoration: none;
-            margin: 0 10px;
+            color: white;
+            padding: 10px 20px;
+            transition: transform 0.3s;
+        }
+
+        .navbar a:hover {
+            transform: scale(1.1);
+        }
+
+        .center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 24px;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#games">Games</a>
-        <a href="#apps">Apps</a>
-        <a href="#proxy">Proxy</a>
-        <a href="#settings">Settings</a>
+        <a href="#">Home</a>
+        <a href="#">Games</a>
+        <a href="#">Apps</a>
+        <a href="#">Proxy</a>
+        <a href="#">Settings</a>
     </div>
-
-    <!-- Your page content goes here -->
+    <div class="center-text">
+        <p>Welcome to my little Goofy Site.</p>
+    </div>
 </body>
 </html>
