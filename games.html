@@ -1,25 +1,54 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Your Goofy Site</title>
     <style>
         body {
             background-color: black;
-            color: white;
             margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            justify-content: flex-end;
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        #navbar a:hover {
+            background-color: #555;
+        }
+
+        #content {
+            padding: 100px 0;
+            text-align: center;
+            color: white;
         }
     </style>
-    <title>Games</title>
 </head>
 <body>
-    <div class="content">
-        <h1>I don't have any games website. If you know any, make an issue and I will add it.</h1>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="apps.html">Apps</a>
+        <a href="proxy.html">Proxy</a>
+        <a href="memes.html">Memes</a>
+        <a href="settings.html">Settings</a>
+    </div>
+
+    <div id="content">
+        <h1>I don't know any unblocked game sites. If you know any, make an issue.</h1>
     </div>
 </body>
 </html>
