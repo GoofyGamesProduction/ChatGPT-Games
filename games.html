@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Games - Your Goofy Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - The Binding of Isaac</title>
     <style>
         body {
             background-color: black;
+            color: white;
             margin: 0;
             font-family: Arial, sans-serif;
+            text-align: center;
         }
 
         #navbar {
@@ -16,12 +19,13 @@
             background-color: #333;
             display: flex;
             justify-content: flex-end;
+            padding: 10px;
         }
 
         #navbar a {
             text-decoration: none;
             color: white;
-            padding: 10px 20px;
+            padding: 10px;
             margin-right: 10px;
             transition: background-color 0.3s;
         }
@@ -30,14 +34,27 @@
             background-color: #555;
         }
 
-        #content {
-            padding: 100px 0;
-            text-align: center;
-            color: white;
+        #gameContainer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #gameImage {
+            width: 200px; /* Adjust the width as needed */
+            height: auto;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        #gameImage:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
+
     <div id="navbar">
         <a href="index.html">Home</a>
         <a href="games.html">Games</a>
@@ -47,8 +64,17 @@
         <a href="settings.html">Settings</a>
     </div>
 
-    <div id="content">
-        <h1>I don't know any unblocked game sites. If you know any, make an issue.</h1>
+    <div id="gameContainer">
+        <!-- Replace 'path-to-game-thumbnail.jpg' with the actual path to your game thumbnail -->
+        <img id="gameImage" src="path-to-game-thumbnail.jpg" alt="The Binding of Isaac" onclick="openGamePage()">
     </div>
+
+    <script>
+        function openGamePage() {
+            // Redirect to the index.html file in games/TheBindingOfIssacWrathOfTheLamb folder
+            window.location.href = 'games/TheBindingOfIssacWrathOfTheLamb/index.html';
+        }
+    </script>
+
 </body>
 </html>
