@@ -3,23 +3,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proxy Browser</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        #navbar a:hover {
+            background-color: #555;
+        }
+
+        #content {
+            padding: 80px 20px 20px;
+            text-align: center;
+        }
+
+        #searchForm {
+            margin-top: 20%;
+        }
+
+        #searchInput {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #searchButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #proxyFrame {
+            width: 100%;
+            height: 80vh;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Proxy Browser</h1>
-    <input type="url" id="urlInput" placeholder="Enter URL">
-    <button onclick="loadUrl()">Load</button>
-    <iframe id="proxyFrame" width="100%" height="600" frameborder="0"></iframe>
+
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="apps.html">Apps</a>
+        <a href="proxy.html">Proxy</a>
+        <a href="memes.html">Memes</a>
+        <a href="settings.html">Settings</a>
+    </div>
+
+    <div id="content">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Type your search">
+            <button type="button" id="searchButton" onclick="search()">Search</button>
+        </form>
+
+        <iframe id="proxyFrame" style="display: none;"></iframe>
+    </div>
 
     <script>
-        function loadUrl() {
-            const urlInput = document.getElementById('urlInput');
-            const proxyFrame = document.getElementById('proxyFrame');
+        function search() {
+            var searchQuery = document.getElementById('searchInput').value;
+            var proxyFrame = document.getElementById('proxyFrame');
 
-            if (urlInput.value.trim() !== '') {
-                const proxyUrl = 'https://cors-anywhere.herokuapp.com/' + urlInput.value;
-                proxyFrame.src = proxyUrl;
-            }
+            // Set the iframe source to the search query
+            proxyFrame.src = 'https://www.example.com/search?q=' + encodeURIComponent(searchQuery);
+
+            // Display the iframe
+            proxyFrame.style.display = 'block';
         }
     </script>
+
 </body>
 </html>
