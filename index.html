@@ -1,12 +1,9 @@
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Goofy Site</title>
     <style>
         body {
             background-color: black;
-            color: white;
             margin: 0;
             font-family: Arial, sans-serif;
         }
@@ -18,15 +15,25 @@
             background-color: #333;
             display: flex;
             justify-content: flex-end;
-            padding: 10px;
         }
 
         #navbar a {
             text-decoration: none;
             color: white;
-            padding: 10px;
+            padding: 10px 20px;
             margin-right: 10px;
             transition: background-color 0.3s;
+        }
+
+        #navbar a:hover {
+            background-color: #555;
+        }
+
+        #content {
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
     </style>
 </head>
 <body>
