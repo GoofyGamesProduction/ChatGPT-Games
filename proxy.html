@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proxy Browser</title>
+    <title>Proxy Page</title>
     <style>
         body {
             background-color: black;
@@ -38,26 +38,11 @@
             text-align: center;
         }
 
-        #searchForm {
-            margin-top: 20%;
-        }
-
-        #searchInput {
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        #searchButton {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
         #proxyFrame {
-            width: 100%;
+            width: 80%;
             height: 80vh;
             border: none;
-            margin-top: 20px;
+            margin: auto;
         }
     </style>
 </head>
@@ -73,26 +58,8 @@
     </div>
 
     <div id="content">
-        <form id="searchForm">
-            <input type="text" id="searchInput" placeholder="Type your search">
-            <button type="button" id="searchButton" onclick="search()">Search</button>
-        </form>
-
-        <iframe id="proxyFrame" style="display: none;"></iframe>
+        <iframe id="proxyFrame" src="https://shouldiboosttherammerheadserver.tk/" scrolling="auto"></iframe>
     </div>
-
-    <script>
-        function search() {
-            var searchQuery = document.getElementById('searchInput').value;
-            var proxyFrame = document.getElementById('proxyFrame');
-
-            // Set the iframe source to the proxy URL with the search query
-            proxyFrame.src = 'https://shouldiboosttherammerheadserver.tk/?q=' + encodeURIComponent(searchQuery);
-
-            // Display the iframe
-            proxyFrame.style.display = 'block';
-        }
-    </script>
 
 </body>
 </html>
