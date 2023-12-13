@@ -1,224 +1,170 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
     <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
-
-        #navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            display: flex;
-            justify-content: flex-end;
-            padding: 10px;
-            z-index: 10000;
-        }
-
-        #navbar a {
-            text-decoration: none;
-            color: white;
-            padding: 10px;
-            margin-right: 10px;
-            transition: background-color 0.3s;
-        }
-
-        #navbar a:hover {
-            background-color: #555;
-        }
-
-        #background {
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            background: radial-gradient(circle, rgb(0, 0, 0), rgb(1, 44, 42));
-        }
-
-        .star {
-            position: absolute;
-            background: rgb(57, 255, 215);
-            border-radius: 50%;
-            transform: scale(0);
-            animation: sparkle 2s infinite, drift linear infinite;
-        }
-
-        @keyframes sparkle {
-            0%, 100% {
-                opacity: 0;
-                transform: scale(0);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        @keyframes drift {
-            0%, 100% {
-                transform: translate(0, 0);
-            }
-            50% {
-                transform: translate(50px, -50px);
-            }
-        }
-
-        body {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        input {
-            margin-bottom: 10px;
-        }
-
-        .image-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .image {
-            width: 250px;
-            height: 250px;
-            border: 2px solid #daf3f1;
-            margin: 40px;
-            padding: 10px;
-            box-sizing: border-box;
-            transition: all 0.3s ease;
-        }
-
-        .image:hover {
-            transform: scale(1.1);
-            border-color: #9900ff;
-        }
-
-        .bottom-left {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            color: rgba(255, 255, 255, 0.2);
-            padding: 10px;
-        }
-
-        #menu {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 9999;
-            background-color: rgba(0, 255, 255, 0.2);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border-radius: 5px;
-            width: 200px;
-        }
-
-        #menuContent {
-            padding: 10px;
-        }
-
-        #closeButton {
-            float: right;
-            cursor: pointer;
-            color: #333;
-        }
-
-        #launchButton {
-            font-family: Arial;
-            font-size: 16px;
-            color: #fff;
-            background-color: #333;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-
-        #launchButton:hover {
-            background-color: #555;
-        }
+      html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    .centered-element {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
     </style>
-</head>
-<body>
-
-<div id="navbar">
-    <a href="index.html">Home</a>
-    <a href="games.html">Games</a>
-    <a href="apps.html">Apps</a>
-    <a href="proxy.html">Proxy</a>
-    <a href="memes.html">Memes</a>
-    <a href="settings.html">Settings</a>
-</div>
-
-<div id="background">
-    <!-- Generating stars -->
-    <script>
-        const numStars = 300;
-        const background = document.getElementById('background');
-
-        for (let i = 0; i < numStars; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            star.style.width = `${Math.random() * 3}px`;
-            star.style.height = star.style.width;
-            star.style.left = `${Math.random() * 100}vw`;
-            star.style.top = `${Math.random() * 100}vh`;
-
-            background.appendChild(star);
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+      body {
+          font-family: 'Montserrat', sans-serif;
+      }
+  </style>
+    <title>
+      Slate
+      </title>
+    <style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+</style>
+   <style>
+        @media screen and (min-width: 768px) {
+            body {
+                zoom: 125%;
+            }
         }
-    </script>
-</div>
-
-<div id="menu">
-    <div id="menuContent">
-        <span id="closeButton" onclick="closeMenu()">&times;</span>
-        <button id="launchButton" onclick="launchByeBlocker()">Launch ByeBlocker</button>
-    </div>
-</div>
-
-<!-- Add the rest of your HTML code here -->
-
-<div class="bottom-left">
-    Tacogamerman made all of this
-</div>
-
-<script>
-    function closeMenu() {
-        document.getElementById('menu').remove();
+     </style>
+  </head>
+<head>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Montserrat', sans-serif;
     }
 
-    function launchByeBlocker() {
-        var link = prompt("Url?");
-        var proxy = 'https://api.codetabs.com/v1/proxy?quest=';
-        fetch(proxy + link)
-            .then((response) => response.text())
-            .then((text) => {
-                document.write(text);
-                closeMenu();
-            });
-        var all = document.getElementsByTagName("*");
-        for (var i = 0, max = all.length; i < max; i++) {
-            if (all[i].src) {
-                all[i].src = new URL(all[i].src, link).href;
-                all[i].src = proxy + all[i].src;
-            }
+    .container {
+      max-width: 400px;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"] {
+      width: 90%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .form-group input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #303030;
+      color: #ffffff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #282828;
+      color: #ffffff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #3f3f3f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Slate V1</h1>
+    <form method="POST" action="/service/gateway">
+      <div class="form-group">
+        <label for="url">URL</label>
+        <input type="text" id="url" name="url" placeholder="Enter URL" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Submit">
+
+        <header>
+                 -----------------------------------
+        </header>
+
+        <script>
+    function blank(){
+      (function () {var url = document.URL; var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement("script"); script.src = ""; win.document.body.appendChild(script); })();
+    }
+    </script>
+    <button onclick="blank();">About:blank cloak</button>
+   
+   <style>
+      html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    .centered-element {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    </style>
+
+    <style>
+      body {
+        background: linear-gradient(90deg, #000000, #313030, #000000);
+        background-size: 300% 300%;
+        animation: gradientAnimation 10s ease infinite;
+      }
+    
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
         }
-        window.onbeforeunload = function (e) {
-            e.preventDefault();
-            alert(e.toString());
-        };
-        function locationHashChanged(e) {
-            e.preventDefault();
-            alert(e);
-            window.location = new URL(e.oldURL
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
